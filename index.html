@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Himanshu Harsh - Portfolio</title>
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Himanshu Harsh</h1>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>
+            Hello! I'm Himanshu Harsh, a passionate Full Stack Web Developer with a keen interest in creating dynamic and user-friendly web applications. I enjoy solving complex problems and continuously learning about new technologies. My background in computer science has provided me with a solid foundation in software development principles and practices.
+        </p>
+    </section>
+
+    <section id="skills-chart-container">
+        <h2>Skills Overview</h2>
+        <div class="chart-wrapper"><canvas id="skillsPieChart"></canvas></div>
+    </section>
+
+    <section id="interests">
+        <h2>My Interests</h2>
+        <ul>
+            <li>Open Source Contribution</li>
+            <li>Attending Tech Meetups</li>
+            <li>Freelancing</li>
+            <li>Playing Chess</li>
+            <li>Photography</li>
+        </ul>
+    </section>
+
+    <section id="projects">
+        <h2>My Projects</h2>
+        <article class="project">
+            <h3>Currency Converter</h3>
+            <p>
+                This project is a mobile currency converter application built with React Native and Expo. It is designed to provide a seamless and intuitive user experience for converting between various world currencies on both iOS and Android devices from a single codebase.
+                <br><br>
+                The application's core purpose is to offer users quick, accessible, and up-to-date exchange rate information. This is a practical tool for travelers, finance professionals, and anyone needing to perform currency conversions on the go.
+                <br><br>
+                <strong>Technical Stack & Architecture</strong>
+                <ul>
+                    <li>
+                        <strong>Framework: </strong>
+                        React Native was chosen to enable cross-platform development, allowing for a single set of code to power both the iOS and Android applications. This approach maximizes development efficiency and ensures a consistent user experience across platforms.
+                    </li>
+                        
+                    <li>
+                        <strong>Platform: </strong>
+                        The Expo framework is utilized to streamline the development and build process. By using Expo, the project benefits from simplified access to native device APIs, over-the-air (OTA) updates, and a managed workflow that abstracts away much of the complexity of native mobile development. The project is configured to use the modern, versioned @expo/cli, ensuring a fast and reliable development environment.
+                    </li>
+                </ul>
+                <strong>Key Features </strong>
+                While I don't have the application's UI or logic code, a project of this nature typically includes: <br>
+                <ul>
+                    <li>
+                        <strong>Real-Time Exchange Rates: </strong>
+                        Integration with a third-party financial data API to fetch the latest currency exchange rates.
+                    </li>
+                    <li>
+                        <strong>User-Friendly Interface: </strong>
+                        A clean, intuitive interface for selecting currencies and inputting values for conversion.
+                    </li>
+                    <li>
+                        <strong>Multiple Currency Support: </strong>
+                        A comprehensive list of global currencies for users to choose from.
+                    </li>
+                </ul>
+                This project serves as a strong example of modern mobile application development, demonstrating skills in creating cross-platform, API-driven, and user-focused tools.
+            </p>
+            <a href="https://github.com/Himanshu-Harsh/CurrencyConvertorApp" target="_blank">View on GitHub</a>
+        </article>
+
+        <article class="project">
+            <h3>EV Demand Forecasting</h3>
+            <p>
+                This project is a machine learning model designed to predict the sales of electric vehicles. It analyzes historical sales data to forecast future trends. The project utilizes various machine learning techniques to provide accurate and actionable insights for stakeholders in the electric vehicle industry.
+            </p>
+            <a href="https://github.com/Himanshu-Harsh/EV_vehicle_forecast" target="_blank">View on GitHub</a>
+        </article>
+
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Feel free to reach out! You can email me at <a href="mailto:harshhimanshu725@gmail.com">harshhimanshu@gmail.com</a> or find me on the following platforms:</p>
+        <ul>
+            <li><a href="https://www.linkedin.com/in/himanshu-harsh-dev-dude" target="_blank">LinkedIn</a></li>
+            <li><a href="https://github.com/Himanshu-Harsh" target="_blank">GitHub</a></li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Himanshu Harsh. All rights reserved.</p>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const ctx = document.getElementById('skillsPieChart');
+        new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: [
+                    'HTML5 & CSS3', 'JavaScript (ES6+)', 'React.js', 'React Native',
+                    'Tailwind CSS', 'Bootstrap', 'Node.js & Express', 'MongoDB', 'RESTful APIs', 'Firebase'
+                ],
+                datasets: [{
+                    label: 'Skill Proficiency',
+                    data: [95, 80, 75, 70, 80, 80, 75, 75, 70, 85],
+                    backgroundColor: [
+                        '#E34F26', '#F7DF1E', '#61DAFB', '#61DAFB',
+                        '#06B6D4', '#7952B3', '#339933', '#47A248', '#00A98F', '#FFCA28'
+                    ],
+                    hoverOffset: 8
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'left',
+                        labels: {
+                            boxWidth: 20,
+                            padding: 15
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
